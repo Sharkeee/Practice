@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -14,7 +15,9 @@ public class Main {
         }
         else {
             System.out.println("Dobrze");
+            int[] counting = {1,2,3,4,5,6,7,8,9,10};
+            System.out.println(Arrays.toString(counting));
+            }
         }
 
     }
-}
