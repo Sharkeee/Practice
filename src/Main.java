@@ -17,8 +17,12 @@ public class Main {
             int[] counting = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
             System.out.println(Arrays.toString(counting));
 
-            int[] copiedCounting = Arrays.copyOf(counting, counting.length);
-            System.out.println(Arrays.toString(copiedCounting));
+            int[] copiedCounting = new int[10];
+            Arrays.fill(copiedCounting, 5);
+            for(int i = 0; i<copiedCounting.length; i++) {
+                System.out.println(copiedCounting[i]);
+
+            }
         }
     }
 }
