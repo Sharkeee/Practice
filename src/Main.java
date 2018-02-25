@@ -9,15 +9,16 @@ public class Main {
         System.out.println("Podaj swoje imie: ");
         String name = in.nextLine();
         wyborImienia:
-        if(!name.equalsIgnoreCase("przemek")) {
+        if (!name.equalsIgnoreCase("przemek")) {
             System.out.println("ZLE");
             break wyborImienia;
-        }
-        else {
+        } else {
             System.out.println("Dobrze");
-            int[] counting = {1,2,3,4,5,6,7,8,9,10};
+            int[] counting = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
             System.out.println(Arrays.toString(counting));
-            }
-        }
 
+            int[] copiedCounting = Arrays.copyOf(counting, counting.length);
+            System.out.println(Arrays.toString(copiedCounting));
+        }
     }
+}
