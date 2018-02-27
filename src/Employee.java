@@ -33,11 +33,20 @@ public class Employee {
     }
 
     public Employee(String name, double salary, int year, int month, int day) {
+        setId();
         this.name = name;
         this.salary = salary;
         this.hireDay = LocalDate.of(year, month, day);
-
-
+    }
+    public Employee() {
+        setId();
+        name = "";
+        salary = 0;
+        hireDay = LocalDate.now();
+    }
+    public Employee(double s) {
+        this("Przemek",s,2018,11,15);
+        nextId++;
     }
 
     public void setId() {
@@ -46,15 +55,14 @@ public class Employee {
     }
 
     public static void przyznajPremie(Employee pracownik, Double premia) {
-        System.out.println("Planujesz wlasnie przyznac " + premia + "PLN premii pracownikowi o ID [" + pracownik.getId()+"]");
+        System.out.println("Planujesz wlasnie przyznac " + premia + "PLN premii pracownikowi o ID [" + pracownik.getId() + "]");
         ;
         System.out.println("Aby zatwierdzic przyznanie premii wpisz TAK");
         String answer = in.next();
-        if(answer.equalsIgnoreCase("tak")) {
+        if (answer.equalsIgnoreCase("tak")) {
             pracownik.salary += premia;
-            System.out.println("Premia przyznana, obecne zarobki pracownika ("+pracownik.getId()+") wynosza " + pracownik.getSalary() + "PLN");
-        }
-        else {
+            System.out.println("Premia przyznana, obecne zarobki pracownika (" + pracownik.getId() + ") wynosza " + pracownik.getSalary() + "PLN");
+        } else {
             System.out.println("Przyznawanie premii anulowane");
         }
 
