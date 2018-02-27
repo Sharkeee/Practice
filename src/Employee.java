@@ -33,19 +33,19 @@ public class Employee {
     }
 
     public Employee(String name, double salary, int year, int month, int day) {
-        setId();
         this.name = name;
         this.salary = salary;
         this.hireDay = LocalDate.of(year, month, day);
     }
+
     public Employee() {
-        setId();
         name = "";
         salary = 0;
         hireDay = LocalDate.now();
     }
+
     public Employee(double s) {
-        this("Przemek",s,2018,11,15);
+        this("Przemek", s, 2018, 11, 15);
         nextId++;
     }
 
@@ -66,5 +66,11 @@ public class Employee {
             System.out.println("Przyznawanie premii anulowane");
         }
 
+    }
+
+    //blok inicjalizujacy obiektu - wykona sie za kazdym razem gdy utworzymy nowy obiekt
+    {
+        id = nextId;
+        nextId++;
     }
 }
