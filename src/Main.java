@@ -24,7 +24,7 @@ public class Main {
         Double x = 0.1;
         NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance();
         System.out.println(currencyFormatter.format(x));
-        dev.przyznajPremie(500.0);
+        Employee.przyznajPremie(dev,500.0);
     }
 
 }

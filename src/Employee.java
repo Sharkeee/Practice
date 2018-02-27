@@ -45,14 +45,14 @@ public class Employee {
         nextId++;
     }
 
-    public void przyznajPremie(Double premia) {
-        System.out.println("Planujesz wlasnie przyznac " + premia + "PLN premii pracownikowi o ID [" + this.getId()+"]");
+    public static void przyznajPremie(Employee pracownik, Double premia) {
+        System.out.println("Planujesz wlasnie przyznac " + premia + "PLN premii pracownikowi o ID [" + pracownik.getId()+"]");
         ;
         System.out.println("Aby zatwierdzic przyznanie premii wpisz TAK");
         String answer = in.next();
         if(answer.equalsIgnoreCase("tak")) {
-            this.salary += premia;
-            System.out.println("Premia przyznana, obecne zarobki pracownika ("+this.getId()+") wynosza " + this.getSalary() + "PLN");
+            pracownik.salary += premia;
+            System.out.println("Premia przyznana, obecne zarobki pracownika ("+pracownik.getId()+") wynosza " + pracownik.getSalary() + "PLN");
         }
         else {
             System.out.println("Przyznawanie premii anulowane");
