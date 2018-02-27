@@ -6,6 +6,8 @@ public class Employee {
     private String name;
     private double salary;
     private LocalDate hireDay;
+    private static int nextId = 1;
+    private int id;
 
     Scanner in = new Scanner(System.in);
 
@@ -21,6 +23,14 @@ public class Employee {
         return hireDay;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public static int getNextId() {
+        return nextId;
+    }
+
     public Employee(String name, double salary, int year, int month, int day) {
         this.name = name;
         this.salary = salary;
@@ -28,6 +38,11 @@ public class Employee {
 
 
     }
+    public void setId() {
+        id = nextId;
+        nextId++;
+    }
+
 
     public void raiseSalary(Employee pracownik, Double newSalary) {
         if (newSalary > pracownik.salary) {
