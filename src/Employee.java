@@ -1,6 +1,4 @@
-import java.text.NumberFormat;
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.Scanner;
 
 public class Employee {
@@ -10,6 +8,12 @@ public class Employee {
     private LocalDate hireDay;
     private static int nextId = 1;
     private int id;
+
+    //blok inicjalizujacy obiektu - wykona sie za kazdym razem gdy utworzymy nowy obiekjt
+    {
+        id = nextId;
+        nextId++;
+    }
 
 
     public String getName() {
@@ -68,9 +72,5 @@ public class Employee {
 
     }
 
-    //blok inicjalizujacy obiektu - wykona sie za kazdym razem gdy utworzymy nowy obiekt
-    {
-        id = nextId;
-        nextId++;
-    }
+
 }
