@@ -1,6 +1,8 @@
 import nauka.obiektowka.Employee;
+import nauka.obiektowka.Executive;
 import nauka.obiektowka.Manager;
 
+import java.util.Date;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -10,15 +12,24 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Manager boss = new Manager("Przemek Kijak", 1500.0,2018,2,15);
-        Employee[] staff = new Employee[3];
-        staff[0] = boss;
-        staff[1] = new Employee("Pawel Grudzinski",300.0,2018,2,20);
-        staff[2] = new Employee("Karol Krawczyk", 500.0,2018,2,22);
+        Manager boss = new Manager();
+        Executive nowy = new Executive("Tomasz", 500.0, 2018, 1, 15);
+        Employee[] staff = new Employee[4];
+        staff[0] = new Manager("Przemek Kijak", 500.0, 2018, 1, 15);
+        staff[1] = new Employee("Pawel Grudzinski", 300.0, 2018, 2, 20);
+        staff[2] = new Employee("Karol Krawczyk", 500.0, 2018, 2, 22);
+        staff[3] = nowy;
+        nowy.setBonus(500.0);
+        if (staff[0] instanceof Manager) {
+            boss = (Manager) staff[0];
+            System.out.println("cos");
+        } else {
+            System.out.println("nie cos");
+        }
         boss.setBonus(350.0);
 
-        for(Employee i : staff)
-        {
+
+        for (Employee i : staff) {
             System.out.println(i.getName() + " " + i.getSalary());
         }
 
