@@ -50,11 +50,6 @@ public class Employee {
         hireDay = LocalDate.now();
     }
 
-    public Employee(double wynagrodzenie) {
-        this("shark", wynagrodzenie, 2018, 11, 15);
-        nextId++;
-    }
-
     public void setId() {
         id = nextId;
         nextId++;
