@@ -1,6 +1,4 @@
-import nauka.obiektowka.Employee;
-import nauka.obiektowka.Executive;
-import nauka.obiektowka.Manager;
+import nauka.obiektowka.*;
 
 import java.util.Date;
 import java.util.Random;
@@ -32,6 +30,9 @@ public class Main {
         for (Employee i : staff) {
             System.out.println(i.getName() + " " + i.getSalary());
         }
+        // abstrakcyjne
+        Person p = new Student("Tomasz", "Programowanie");
+        System.out.println(p.getDescription());
 
     }
 
