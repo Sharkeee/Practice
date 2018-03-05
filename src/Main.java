@@ -1,3 +1,5 @@
+import nauka.obiektowka.Employee;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -11,7 +13,7 @@ public class Main {
         Employee boss = new Employee("Kijak", 1980.0, 2018, 1, 15);
         Employee[] staff = new Employee[3];
         staff[0] = new Employee("Kowalski", 1500.0, 2018, 2, 25);
-        staff[1] = new Employee("Mazur", 300.0, 2018, 1, 15);
+        staff[1] = new Employee("Blabla", 300.0, 2018, 1, 15);
         staff[2] = new Employee();
         System.out.println(dev.getId());
         System.out.println(boss.getId());

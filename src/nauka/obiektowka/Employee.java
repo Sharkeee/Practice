@@ -1,11 +1,13 @@
+package nauka.obiektowka;
+
 import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Employee {
     static Scanner in = new Scanner(System.in);
-    private String name;
+    private final String name;
     private double salary;
-    private LocalDate hireDay;
+    private final LocalDate hireDay;
     private static int nextId = 1;
     private int id;
 
@@ -48,8 +50,8 @@ public class Employee {
         hireDay = LocalDate.now();
     }
 
-    public Employee(double s) {
-        this("Przemek", s, 2018, 11, 15);
+    public Employee(double wynagrodzenie) {
+        this("shark", wynagrodzenie, 2018, 11, 15);
         nextId++;
     }
 
