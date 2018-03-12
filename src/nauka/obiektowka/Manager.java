@@ -1,4 +1,4 @@
-package nauka.obiektowka;
+/*package nauka.obiektowka;
 
 public class Manager extends Employee {
     private double bonus;
@@ -24,3 +24,4 @@ public class Manager extends Employee {
         return managerSalary;
     }
 }
+**/

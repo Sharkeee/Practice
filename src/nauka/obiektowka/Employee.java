@@ -3,9 +3,9 @@ package nauka.obiektowka;
 import java.time.LocalDate;
 import java.util.Scanner;
 
-public class Employee {
+public class Employee extends Person{
     static Scanner in = new Scanner(System.in);
-    private final String name;
+    private String name;
     private double salary;
     private final LocalDate hireDay;
     private static int nextId = 1;
@@ -17,6 +17,9 @@ public class Employee {
         nextId++;
     }
 
+    public String getDescription() {
+        return String.format("pracownik zarabiajacy  %.2f zl", salary);
+    }
 
     public String getName() {
         return name;
@@ -39,16 +42,12 @@ public class Employee {
     }
 
     public Employee(String name, double salary, int year, int month, int day) {
+        super(name);
         this.name = name;
         this.salary = salary;
         this.hireDay = LocalDate.of(year, month, day);
     }
 
-    public Employee() {
-        name = "";
-        salary = 0;
-        hireDay = LocalDate.now();
-    }
 
     public void setId() {
         id = nextId;
@@ -67,6 +66,9 @@ public class Employee {
             System.out.println("Przyznawanie premii anulowane");
         }
 
+    }
+    public String toString() {
+        return getClass().getName() + "[name=" + name + ".salary=" + salary + ".hireDay=" + hireDay + "]";
     }
 
 
