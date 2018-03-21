@@ -17,11 +17,6 @@ public class Main {
         people[1] = new Student("Przemek Test", "Informatyka");
 
         System.out.println(people[0].getDescription());
-        System.out.println(people[1].getDescription());
-        System.out.println(people[0].getName());
-
-        System.out.println(people[0].toString());
-        System.out.println(people[1].toString());
     }
 
 
