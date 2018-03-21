@@ -24,13 +24,15 @@ public class Main {
 
         System.out.println(people[0].getDescription());
         System.out.println("Pobranie informacji o pracowniku z array list (TEST): \n");
-        for(int i = 0; i<+staff.size(); i++) {
+
+      /*  for (int i = 0; i < +staff.size(); i++) {
             System.out.println("Dane osobowe: " + staff.get(i).getName());
             System.out.println("Zarobki: " + staff.get(i).getSalary());
             System.out.println("Data zatrudnienia: " + staff.get(i).getHireDay());
             System.out.println("\n");
-            
-        }
+
+        } */
     }
+
 }
 
