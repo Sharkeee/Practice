@@ -14,7 +14,7 @@ public class EnumTest {
         }
     }
 
-    public enum Size {
+     enum Size {
         SMALL("S"), MEDIUM("M"), LARGE("L"), EXTRA_LARGE("XL");
 
         private String abbreviation;
